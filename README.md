@@ -1,219 +1,103 @@
-# Awesome-On-Premises-Object-Storage
+# Awesome On-Premises Object Storage 🚀
 
-## Top On-Premises Object Storage Ecosystem
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+[![Tracked Repos](https://img.shields.io/badge/Open--Source-14%20Projects-blue?style=flat-square)](https://github.com/ishandutta2007/Awesome-On-Premises-Object-Storage)
+[![License](https://img.shields.io/badge/License-CC0--1.0-green?style=flat-square)](LICENSE)
 
+> **Curated Ecosystem Guide for On-Premises Object Storage, S3-Compatible Self-Hosted Storage, Enterprise Data Lakes & Private Cloud Infrastructure.**
 
-
-**Curated List of SaaS Products & Open-Source GitHub Projects**
-
-*Focused on S3-Compatible Object Storage, Enterprise Data Lakes & Self-Hosted Storage Platforms*
-
-**Last updated: October 2026**
-
-
-
-This repository tracks notable **commercial object storage platforms** and **open-source projects** that provide S3-compatible storage on-premises — enabling organizations to build private data lakes, backup repositories, and AI/ML data pipelines without cloud dependency.
-
-
-
-**Examples** include Amazon S3 Outposts, MinIO Enterprise, Cloudian HyperStore, Pure Storage FlashBlade, NetApp StorageGRID, Scality RING, Dell EMC ECS, Nutanix Objects, IBM Cloud Object Storage System, and Hitachi Content Platform (the category leaders).
-
-
-
-**Open-source emphasis**: On-premises object storage is a domain where open-source provides production-grade alternatives. **MinIO** leads as the de facto standard for S3-compatible object storage, **Ceph** delivers unified object/block/file storage, **Garage** brings lightweight distributed object storage, and **SeaweedFS** offers fast, scalable storage for billions of files. **Kypello** preserves MinIO's enterprise features under a pure open-source license. **Zenko** provides multi-cloud data management. This section is heavily expanded.
-
-
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-
-
-## Table of Contents
-
-- [SaaS/Hosted Platforms](#saas-hosted-platforms)
-
-- [Open-Source GitHub Projects](#open-source-github-projects)
-
-- [How to Contribute](#how-to-contribute)
-
-- [Disclaimer](#disclaimer)
-
-
-
-## SaaS/Hosted Platforms
-
-
-
-- **[Amazon S3 Outposts](https://aws.amazon.com/s3/outposts/)**  
-
-  **AWS's on-premises S3** — S3-compatible storage on Outposts hardware with local data residency . **Native AWS integration** . **Best for AWS-native hybrid workloads** .
-
-
-
-- **[MinIO Enterprise (AIStor)](https://min.io/)**  
-
-  **Enterprise distribution of MinIO** — commercial license with SLA-backed support . **For workloads requiring proprietary usage or production-level support** . **Best for enterprise MinIO deployments** .
-
-
-
-- **[Cloudian HyperStore](https://cloudian.com/)**  
-
-  **Petabyte-scale S3-compatible object storage** — multi-tenancy, billing, QoS, and WORM compliance . **HyperIQ analytics platform** with predictive capacity planning . **Best for enterprise AI workloads and service providers** .
-
-
-
-- **[Pure Storage FlashBlade](https://www.purestorage.com/)**  
-
-  **Unified all-flash file and object storage** — native NFS, SMB, and S3 on one system . **Zero Move Tiering and SafeMode snapshots** for cyber resilience . **Best for high-performance AI/HPC workloads** .
-
-
-
-- **[NetApp StorageGRID](https://www.netapp.com/)**  
-
-  **Federated global namespace object storage** — scales to 10 Exabytes in a single namespace . **Up to 12 TB/s throughput** for AI factories . **Best for globally distributed AI data lakes** .
-
-
-
-- **[Scality RING](https://www.scality.com/)**  
-
-  **Software-defined distributed object storage** — multi-petabyte to exabyte scale . **RING XP** delivers microsecond latency for AI training . **Best for sovereign cloud and service-provider environments** .
-
-
-
-- **[Dell EMC ECS](https://www.dell.com/)**  
-
-  **Enterprise object storage platform** — S3-compatible with global namespace . **ObjectLock, KMIP key management, and Air Gap network isolation** . **Best for compliance-heavy workloads** .
-
-
-
-- **[Nutanix Objects](https://www.nutanix.com/)**  
-
-  **S3-compatible object storage on Nutanix AOS** — deployed as VMs on HCI clusters . **Unified namespace across clusters** . **Best for Nutanix ecosystem users** .
-
-
-
-- **[IBM Cloud Object Storage System](https://www.ibm.com/)**  
-
-  **Software-defined on-premises object storage** — 99.9999999999999 durability . **Patented SecureSlice with S3 Object Lock** . **Best for petabyte to exabyte scale** .
-
-
-
-- **[Hitachi Content Platform](https://www.hitachivantara.com/)**  
-
-  **Object storage with hybrid cloud broker** — policy-based data movement to public clouds . **Advanced custom metadata and query capabilities** . **Best for IoT and surveillance data** .
-
-
-
-## Open-Source GitHub Projects
-
-
-
-### S3-Compatible Object Storage
-
-
-
-- **[MinIO](https://github.com/minio/minio)**  
-
-  **The de facto standard for S3-compatible object storage**, AGPL-3.0 licensed with **50,000+ GitHub stars** . **High-performance, scalable object storage** for AI/ML, analytics, and data-intensive workloads . **S3 API compatible** with existing tools and SDKs . **Erasure coding, bitrot detection, and automatic healing** . **SSE-S3, SSE-C, and SSE-KMS encryption support** . **Integrated tiering to S3-compatible cold storage** . **Built-in Prometheus metrics and MinIO Console** . **Note**: Community edition is now distributed as **source code only** — no pre-compiled binaries . **Best for production S3-compatible object storage** .
-
-
-
-- **[Kypello](https://github.com/kypello-io/kypello)**  
-
-  **Community-maintained fork of MinIO preserving enterprise features**, AGPL-3.0 licensed . **Restores OIDC/SSO support** (Keycloak, Okta, Active Directory, Google Workspace) removed from upstream MinIO . **Full Admin UI** for managing buckets, users, and groups . **High-performance S3-compatible storage** . **No commercial license exception** — all usage must comply with AGPLv3 . **Best for organizations wanting MinIO's features with OIDC/SSO** .
-
-
-
-- **[Ceph](https://github.com/ceph/ceph)**  
-
-  **Unified distributed storage system**, LGPL-2.1 licensed with **15,000+ GitHub stars** . **Object (S3/Swift via RGW), Block (RBD), and File (CephFS) storage** in one system . **Scales to tens of petabytes across thousands of nodes** . **CRUSH-based placement rules across device classes** . **Automatic rebalancing and recovery** . **CephX authentication with multi-tenancy** . **Best for unified storage infrastructure** .
-
-
-
-- **[Garage](https://git.deuxfleurs.fr/Deuxfleurs/garage)**  
-
-  **Lightweight, distributed S3-compatible object storage**, AGPL-3.0 licensed . **Designed for self-hosting and geo-distribution** . **Multi-node clustering with data replication** . **Low resource footprint** — runs on commodity hardware . **Admin API for bucket and key management** . **Best for small to medium self-hosted deployments** .
-
-
-
-- **[SeaweedFS](https://github.com/seaweedfs/seaweedfs)**  
-
-  **Fast distributed storage for billions of files**, Apache-2.0 licensed with **25,000+ GitHub stars** . **S3 API compatible** with Iceberg REST Catalog support . **Handles massive object counts** with low latency . **Tiered storage to cloud** . **Best for large-scale file and object storage** .
-
-
-
-### Multi-Cloud & Hybrid Data Management
-
-
-
-- **[Zenko (Scality)](https://github.com/scality/Zenko)**  
-
-  **Multi-cloud data controller**, Apache-2.0 licensed (open-source edition) . **Single endpoint for on-prem and cloud storage** — AWS, Azure, GCP, DigitalOcean, Wasabi, and Scality RING . **Stores data unmodified** in native cloud format . **Kubernetes orchestration framework** . **Best for hybrid cloud data management** .
-
-
-
-### Additional Strong Open-Source Options
-
-
-
-- **SwiftStack Filesystem Gateway** — NFS/CIFS access to OpenStack Swift object storage .
-
-- **OpenStack Swift** — Object storage engine for OpenStack clouds .
-
-- **MinIO Client (mc)** — Command-line tool for MinIO and S3-compatible storage .
-
-- **Rook** — Kubernetes operator for Ceph storage orchestration .
-
-- **Longhorn** — Cloud-native distributed block storage for Kubernetes .
-
-- **OpenEBS** — Container-attached storage for Kubernetes .
-
-
-
-**Frameworks for building custom on-premises object storage solutions**: Combine **MinIO** or **Kypello** for production S3-compatible object storage with erasure coding and encryption . Use **Ceph** for unified object/block/file storage at petabyte scale . Deploy **Garage** for lightweight, geo-distributed object storage on commodity hardware . Choose **SeaweedFS** for massive object counts with low latency . Integrate **Zenko** for multi-cloud data management across on-prem and public cloud . Note that true enterprise object storage with hardware integration, global federated namespaces, and vendor-supported SLAs (Cloudian, Pure Storage, NetApp, Scality) remains primarily commercial territory; open-source stacks provide strong S3 compatibility, erasure coding, and multi-tenancy foundations that require integration for complete enterprise deployments.
-
-
-
-## How to Contribute
-
-
-
-1. Fork the repo.
-
-2. Add/edit entries in `README.md` (follow existing format).
-
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-
-4. Submit PR with a short explanation.
-
-
-
-Star the repo if you find it useful!
-
-
-
-## Disclaimer
-
-
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-
-- On-premises object storage handles sensitive business data. Self-hosted solutions require proper security hardening, encryption at rest and in transit, access controls, and backup procedures.
-
-- **License considerations**: MinIO uses AGPL-3.0 (no commercial exception) ; Kypello uses AGPL-3.0 with no commercial license exception ; Ceph uses LGPL-2.1; Garage uses AGPL-3.0; SeaweedFS uses Apache-2.0. Verify licensing against your use case before committing.
-
-- **MinIO community edition is source-only** — no pre-compiled binaries are provided. Build from source or use Docker . Commercial/proprietary usage requires the AIStor enterprise license.
-
-- **Hardware requirements vary significantly** — MinIO needs at least four drives per node for distributed erasure coding . Ceph scales to thousands of nodes. Plan infrastructure accordingly.
-
-- The open-source ecosystem provides strong S3 compatibility, erasure coding, and multi-tenancy foundations, but **hardware integration, global federated namespaces, and vendor-supported SLAs** remain primarily commercial offerings.
-
-
+A comprehensive, SEO-optimized guide and directory of **enterprise SaaS / commercial object storage platforms** and **open-source storage engines** enabling S3-compatible object storage on-premises. Designed for storage architects, DevOps engineers, and infrastructure leads building sovereign AI data pipelines, private data lakehouses, and ransomware-resilient backup repositories without public cloud lock-in.
 
 ---
 
+## 📌 Keywords & Topics
+`on-premises object storage` • `s3-compatible` • `self-hosted storage` • `private cloud data lake` • `software-defined storage` • `distributed object storage` • `minio` • `ceph` • `enterprise object storage` • `ai data pipeline storage`
 
+---
 
-**Made for infrastructure engineers, storage architects, and organizations seeking object storage sovereignty.**
+## 📋 Table of Contents
+- [Sector Market Size & Structure](#sector-market-size--structure)
+- [Enterprise & Commercial SaaS Platforms](#enterprise--commercial-saas-platforms)
+- [Open-Source GitHub Projects](#open-source-github-projects)
+- [Architecture Decision Matrix](#architecture-decision-matrix)
+- [How to Contribute](#how-to-contribute)
+- [Disclaimer & License Notes](#disclaimer--license-notes)
 
-Let's make on-premises object storage more open, transparent, and scalable.
+---
+
+## Sector Market Size & Structure
+
+> **Market Sizing & Dynamics:** The global object storage market is estimated at **$37.10 Billion in 2025** and is projected to expand at a **15.8% CAGR** to over **$138 Billion by 2034**. While public cloud hyperscalers dominate public cloud storage, the **on-premises software-defined object storage sector is moderately fragmented** — comprising established enterprise storage appliance giants (Dell, NetApp, IBM, Pure Storage, Hitachi) and specialized software-defined S3 platforms (MinIO, Scality, Cloudian), creating a competitive, non-winner-take-all landscape driven by sovereign AI workloads, data residency compliance, and egress cost reduction.
+
+---
+
+## Enterprise & Commercial SaaS Platforms
+
+Below is the curated list of leading commercial and enterprise on-premises S3-compatible object storage platforms, **sorted in descending order by parent company valuation / annual revenue**:
+
+| Rank | Product / Platform | Company & Size / Valuation | Starting Pricing | Free Tier / Trial Limit | Key Focus & Best For |
+| :---: | :--- | :--- | :--- | :--- | :--- |
+| 1 | **[Amazon S3 Outposts](https://aws.amazon.com/s3/outposts/)** | **Amazon.com, Inc.**<br>• Market Cap: **~$2.70 Trillion**<br>• Revenue: **$638B/yr** ($42.2B/qtr AWS) | **~$0.10 / GB / month** provisioned storage + Outposts hardware rack commit (1U server starts ~$500/mo on 3-yr term) | **No Free Trial for Hardware** *(AWS regional free tier 5GB does not apply to Outposts physical hardware)* | Native AWS hybrid infrastructure with local data residency & AWS S3 API compatibility. |
+| 2 | **[Dell EMC ECS](https://www.dell.com/)** | **Dell Technologies Inc.**<br>• Market Cap: **~$360 Billion**<br>• Revenue: **$95.0 Billion** | Starts at **~$0.015–$0.03 / GB / month** amortized software capacity (starter array hardware packages from ~$45,000 upfront) | **Unlimited Non-Production Free Evaluation** via Dell ECS Community Edition *(virtual appliance without enterprise encryption)* | Enterprise compliance, WORM, ObjectLock, and multi-tenant petabyte-scale storage. |
+| 3 | **[IBM Cloud Object Storage](https://www.ibm.com/)** | **IBM Corporation**<br>• Market Cap: **~$205 Billion**<br>• Revenue: **$67.5 Billion** | **$0.012 / GB / month** (Standard Plan) or **$12.00 / TB / month** (One-Rate Plan); starter node hardware from ~$35,000 | **Free Forever Plan: 5 GB / month** storage + 20k Class A / 100k Class B requests + **$200 USD account credit** (valid 30 days) | Geo-dispersed erasure coding (SecureSlice) with exabyte-scale durability. |
+| 4 | **[Hitachi Content Platform](https://www.hitachivantara.com/)** | **Hitachi, Ltd. / Hitachi Vantara**<br>• Market Cap: **~$158 Billion**<br>• Revenue: **$65.0 Billion** | Starts at **~$0.02–$0.04 / GB / month** amortized subscription (entry software-defined node starter licenses from ~$30,000/yr) | **30-Day Free Trial** for VSP One Software-Defined Storage + sandbox access via Hitachi Vantara Demo Center | Hybrid cloud tiering, advanced metadata indexing, IoT, and medical/surveillance data. |
+| 5 | **[Pure Storage FlashBlade](https://www.purestorage.com/)** | **Pure Storage, Inc.**<br>• Market Cap: **~$46.5 Billion**<br>• Revenue: **$3.64 Billion** | Under **$0.20 / GB** ($200/TB) inclusive of 3 years service on FlashBlade//E (scaling starting at 4PB deployment) | **Free Virtual Sandbox** via "Pure Test Drive" remote lab environment *(interactive guided demos with voucher extensions)* | All-flash high-throughput unified file & S3 storage for AI/ML training and fast analytics. |
+| 6 | **[NetApp StorageGRID](https://www.netapp.com/)** | **NetApp, Inc.**<br>• Market Cap: **~$45.0 Billion**<br>• Revenue: **$7.39 Billion** | Starts at **~$0.025 / GB / month** software licensing (starter SG5712 hardware appliances from ~$70,000) | **90-Day Free Evaluation Software License** downloadable for local hypervisors (VMware ESXi / KVM) | Global federated namespace, policy-based lifecycle management across tens of exabytes. |
+| 7 | **[Nutanix Objects](https://www.nutanix.com/)** | **Nutanix, Inc.**<br>• Market Cap: **~$19.7 Billion**<br>• Revenue: **$2.85 Billion** | Starts at **~$28.00 / TiB / year** ($2.33/TiB/month) on Nutanix Unified Storage (NUS) Starter Edition | **Free Non-Commercial Use** via Nutanix Community Edition (up to 2 TiB storage) + **30-Day NC2 Cloud Trial** | Software-defined S3 storage deployed natively on Nutanix HCI hyperconverged clusters. |
+| 8 | **[MinIO Enterprise (AIStor)](https://min.io/)** | **MinIO, Inc.**<br>• Valuation: **$1.0 Billion**<br>• Revenue: **~$50M+ ARR** | Enterprise Lite starts at **~$2,000 / month** ($24,000/year) for capacity tiers below 400 TiB | **60-Day Free Trial** for AIStor Enterprise suite + **AIStor Free Tier** for single-node development labs | De facto benchmark for ultra-high-speed S3-compatible object storage tailored for AI lakehouses. |
+| 9 | **[Scality RING](https://www.scality.com/)** | **Scality, Inc.**<br>• Valuation: **~$256 Million**<br>• Revenue: **~$45.0 Million** | Subscription model starting at **~$1,667 / month** ($20,000/year) for entry capacity tiers | **30-Day Free Trial** for Scality ARTESCA software + **48-Hour Interactive Scality Test Drive** | Microsecond-latency S3 storage (RING XP) for sovereign cloud, service providers, and AI pipelines. |
+| 10 | **[Cloudian HyperStore](https://cloudian.com/)** | **Cloudian, Inc.**<br>• Valuation: **$256 Million**<br>• Revenue: **$31.6 Million** | Software licensing from **~$0.005–$0.01 / GB / month** ($5–$10/TB/month; starter software plans from ~$10,000/yr) | **45-Day Free Trial Software License** (full-featured evaluation up to 100 TB on virtual machines) | Enterprise petabyte-scale S3 storage with 100% native S3 API guarantees and HyperIQ analytics. |
+
+---
+
+## Open-Source GitHub Projects
+
+The open-source ecosystem offers production-grade S3-compatible storage engines, Kubernetes operators, and distributed storage filesystems. 
+
+Below are the open-source projects, **sorted in descending order by GitHub Star count**. Each star badge links directly to the repository's stargazers page:
+
+| Rank | Repository & Star Badge | License | Description & Architectural Highlights | Best For |
+| :---: | :--- | :--- | :--- | :--- |
+| 1 | **[MinIO](https://github.com/minio/minio)**<br>[![GitHub stars](https://img.shields.io/github/stars/minio/minio?style=social&color=white)](https://github.com/minio/minio/stargazers) | AGPL-3.0 | High-performance, S3-compatible object storage suite. Built for cloud-native data lakehouses, AI workloads, erasure coding, bitrot healing, and SSE encryption. Source-available community distribution. | High-performance production S3 storage. |
+| 2 | **[SeaweedFS](https://github.com/seaweedfs/seaweedfs)**<br>[![GitHub stars](https://img.shields.io/github/stars/seaweedfs/seaweedfs?style=social&color=white)](https://github.com/seaweedfs/seaweedfs/stargazers) | Apache-2.0 | Fast distributed blob store & filesystem designed for billions of small files and massive objects. Features S3 API compatibility, Iceberg REST Catalog support, and transparent cloud tiering. | High-throughput, small-file & big-data object storage. |
+| 3 | **[Ceph](https://github.com/ceph/ceph)**<br>[![GitHub stars](https://img.shields.io/github/stars/ceph/ceph?style=social&color=white)](https://github.com/ceph/ceph/stargazers) | LGPL-2.1 | Unified, battle-tested distributed storage engine providing Object (S3/Swift via RadosGW), Block (RBD), and POSIX File (CephFS) access. Scales across thousands of commodity nodes with CRUSH map placement. | Unified infrastructure block, file, and object storage. |
+| 4 | **[JuiceFS](https://github.com/juicedata/juicefs)**<br>[![GitHub stars](https://img.shields.io/github/stars/juicedata/juicefs?style=social&color=white)](https://github.com/juicedata/juicefs/stargazers) | Apache-2.0 | High-performance POSIX distributed file system built on top of Redis/SQL metadata engines and object storage backends (S3, MinIO, Ceph). | AI training, HDFS replacement, and shared POSIX storage. |
+| 5 | **[Rook](https://github.com/rook/rook)**<br>[![GitHub stars](https://img.shields.io/github/stars/rook/rook?style=social&color=white)](https://github.com/rook/rook/stargazers) | Apache-2.0 | Open-source cloud-native storage orchestrator for Kubernetes. Automates deployment, scaling, healing, and management of Ceph clusters inside Kubernetes. | Kubernetes-native storage orchestration for Ceph. |
+| 6 | **[OpenEBS](https://github.com/openebs/openebs)**<br>[![GitHub stars](https://img.shields.io/github/stars/openebs/openebs?style=social&color=white)](https://github.com/openebs/openebs/stargazers) | Apache-2.0 | Leading Container-Attached Storage (CAS) platform for Kubernetes, powering persistent stateful workloads with local and replicated storage engines. | Stateful workload storage on Kubernetes. |
+| 7 | **[Longhorn](https://github.com/longhorn/longhorn)**<br>[![GitHub stars](https://img.shields.io/github/stars/longhorn/longhorn?style=social&color=white)](https://github.com/longhorn/longhorn/stargazers) | Apache-2.0 | Cloud-native distributed block storage built by Rancher/SUSE for Kubernetes. Features incremental snapshots, backup to S3, and one-click upgrades. | Lightweight Kubernetes block storage. |
+| 8 | **[CubeFS](https://github.com/cubefs/cubefs)**<br>[![GitHub stars](https://img.shields.io/github/stars/cubefs/cubefs?style=social&color=white)](https://github.com/cubefs/cubefs/stargazers) | Apache-2.0 | CNCF hosted cloud-native distributed storage system supporting both POSIX and S3-compatible interfaces. Optimized for massive data lakehouses and multi-tenancy. | Cloud-native multi-tenant data lakehouses. |
+| 9 | **[Garage](https://github.com/deuxfleurs-org/garage)**<br>[![GitHub stars](https://img.shields.io/github/stars/deuxfleurs-org/garage?style=social&color=white)](https://github.com/deuxfleurs-org/garage/stargazers) | AGPL-3.0 | Lightweight, Rust-based geo-distributed S3-compatible object storage service created by Deuxfleurs. Designed for self-hosting across low-power or heterogeneous nodes. | Geo-distributed self-hosted object storage on commodity hardware. |
+| 10 | **[MinIO Client (mc)](https://github.com/minio/mc)**<br>[![GitHub stars](https://img.shields.io/github/stars/minio/mc?style=social&color=white)](https://github.com/minio/mc/stargazers) | AGPL-3.0 | Modern UNIX-style command-line utility providing file management commands (ls, cp, mirror, diff) for MinIO and standard S3 storage services. | S3 object management, syncing, and CLI administration. |
+| 11 | **[OpenStack Swift](https://github.com/openstack/swift)**<br>[![GitHub stars](https://img.shields.io/github/stars/openstack/swift?style=social&color=white)](https://github.com/openstack/swift/stargazers) | Apache-2.0 | Distributed, highly available object storage engine powering OpenStack cloud infrastructure. Built to store large volumes of unstructured data securely and cost-effectively. | OpenStack private cloud object infrastructure. |
+| 12 | **[Apache Ozone](https://github.com/apache/ozone)**<br>[![GitHub stars](https://img.shields.io/github/stars/apache/ozone?style=social&color=white)](https://github.com/apache/ozone/stargazers) | Apache-2.0 | Scalable, redundant distributed object store optimized for Hadoop and big-data ecosystem workloads. Supports both S3 API and HDFS-compatible interfaces. | Hadoop ecosystem big data & analytics object store. |
+| 13 | **[Zenko](https://github.com/scality/Zenko)**<br>[![GitHub stars](https://img.shields.io/github/stars/scality/Zenko?style=social&color=white)](https://github.com/scality/Zenko/stargazers) | Apache-2.0 | Multi-cloud data controller by Scality. Provides a unified S3 namespace across on-premises storage systems and public cloud providers without data lock-in. | Multi-cloud & hybrid cloud data orchestration. |
+| 14 | **[Kypello](https://github.com/kypello-io/kypello)**<br>[![GitHub stars](https://img.shields.io/github/stars/kypello-io/kypello?style=social&color=white)](https://github.com/kypello-io/kypello/stargazers) | AGPL-3.0 | Community-maintained fork of MinIO focused on restoring native OIDC/SSO (Keycloak, Okta, Active Directory) and full admin management capabilities. | Open-source MinIO alternative with full OIDC/SSO support. |
+
+---
+
+## 🏗️ Architecture Decision & Solution Selection Matrix
+
+| Deployment Requirement | Recommended SaaS Platform | Recommended Open-Source Solution |
+| :--- | :--- | :--- |
+| **Ultra-Fast AI/ML Pipeline & Vector Storage** | Pure Storage FlashBlade // MinIO AIStor | MinIO // SeaweedFS |
+| **Petabyte to Exabyte Enterprise Data Lake** | Dell EMC ECS // NetApp StorageGRID | Ceph (via Rook) // Apache Ozone |
+| **Kubernetes-Native Persistent Storage** | Nutanix Objects | Rook / Ceph // Longhorn // JuiceFS |
+| **Small-Scale / Geo-Distributed Self-Hosting** | Cloudian HyperStore | Garage // MinIO |
+| **AWS Hybrid Residency & Native S3 Compatibility** | Amazon S3 Outposts | Zenko (Multi-Cloud Controller) |
+
+---
+
+## 🤝 How to Contribute
+
+Contributions are highly welcome! To add or update an entry:
+1. Fork this repository.
+2. Update `README.md` following the exact table structure and formatting.
+3. Ensure links, stargazers badges, pricing figures, and license details are accurate.
+4. Open a Pull Request with a short summary of the updates.
+
+---
+
+## ⚖️ Disclaimer & License Notes
+- This directory is a **community-curated index** for research and architectural reference.
+- **Licensing Considerations:** Check individual repository licenses before deployment (AGPL-3.0, Apache-2.0, LGPL-2.1). MinIO Community Edition is source-available.
+- All brand names, logos, and trademarks belong to their respective corporate owners.
